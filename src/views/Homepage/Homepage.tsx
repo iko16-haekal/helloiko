@@ -22,7 +22,7 @@ const Homepage: React.FC = (): JSX.Element => {
             projects
           </p>
         </div>
-        <a href="/CurriculumVitae2022_compressed.pdf" target="_blank">
+        <a href="/cv_frontend_iko.pdf" target="_blank">
           <Button className="mt-5 px-6 font-mono flex items-center animate-bounce w-200 h-50 ">
             My Resume
             <div className="ml-2">

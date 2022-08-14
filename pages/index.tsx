@@ -32,7 +32,6 @@ const Home: NextPage = () => {
           name="description"
           content="personal website created by nextjs typescript"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <Homepage />
