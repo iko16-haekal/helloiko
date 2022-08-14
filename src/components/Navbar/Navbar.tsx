@@ -14,8 +14,13 @@ const Menus: React.FC<MenusProps> = ({ onClose }) => {
     <div className="flex flex-col sm:flex-row font-mono text-xs items-center justify-center h-full">
       {LIST_MENU.map((menu, index) => {
         return (
-          <a key={menu} href={`#${menu}`} className="capitalize ml-0 sm:ml-10 mb-10 sm:mb-0" onClick={onClose}>
-            <span className="text-lightGreen pr-2">#{index + 1}.</span>
+          <a
+            key={menu}
+            href={`#${menu}`}
+            className="capitalize ml-0 sm:ml-10 mb-10 sm:mb-0"
+            onClick={onClose}
+          >
+            <span className="text-lightGreen pr-2">{index + 1}.</span>
             {menu}
           </a>
         );
@@ -39,14 +44,14 @@ const Navbar: React.FC = () => {
           <Menus onClose={() => setOpenDrawer(false)} />
         </React.Fragment>
       </Drawer>
-      <div className="z-20 px-5 md:px-12 py-5 md:py-8 fixed flex justify-between items-center w-full  bg-darkBlue">
+      <div className="z-20 px-5 md:px-12 fixed flex justify-between items-center w-full  bg-darkBlue">
         <div>
           <a href={`#${MENU.HOMEPAGE}`}>
             <Image
-              src="/images/logo.png"
+              src="/logo.png"
               alt="hellotoms-logo"
-              width={140}
-              height={25}
+              width="85%"
+              height="55%"
               quality={100}
             />
           </a>
