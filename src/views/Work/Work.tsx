@@ -1,15 +1,15 @@
-import React from "react";
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
 
-import { Container, Tag } from "@components/index";
-import { MENU } from "@constants/index";
-import useMediaQuery from "@hooks/useMediaQuery";
+import { Container, Tag } from "@components/index"
+import { MENU } from "@constants/index"
+import useMediaQuery from "@hooks/useMediaQuery"
 
 interface DetailProjectProps {
-  title?: string;
-  nameApp: string;
-  description: string;
-  tags: string[];
+  title?: string
+  nameApp: string
+  description: string
+  tags: string[]
 }
 
 const DetailProject: React.FC<DetailProjectProps> = (props): JSX.Element => {
@@ -22,15 +22,15 @@ const DetailProject: React.FC<DetailProjectProps> = (props): JSX.Element => {
       </div>
       <div className="flex flex-wrap gap-y-2 mt-2">
         {props.tags.map((tag, index) => {
-          return <Tag name={tag} key={index} className="mr-2" />;
+          return <Tag name={tag} key={index} className="mr-2" />
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Work: React.FC = (): JSX.Element => {
-  const isMobile = useMediaQuery(768);
+  const isMobile = useMediaQuery(768)
   return (
     <Container id={MENU.WORK} className="py-10 sm:py-24 pt-24 md:mb-24">
       <div
@@ -80,16 +80,35 @@ const Work: React.FC = (): JSX.Element => {
           className="col-span-12 md:col-span-6 order-last md:order-none mb-10 sm:mb-0"
         >
           <DetailProject
-            nameApp="Gredu Teacher"
+            nameApp="Task Management List (with nested drag and drop feature)"
             // eslint-disable-next-line max-len
-            description="Web application that works like a teacher's assistant, can automatically arrange schedules and summarize learning outcomes."
-            tags={["React", "Styled component", "React query", "Antd"]}
+            description="Web App that Efficiently organize, track, and prioritize tasks with our intuitive web application for seamless task management."
+            tags={[
+              "React",
+              "Tailwind",
+              "React query",
+              "Mantine",
+              "zustand",
+              "React table",
+            ]}
           />
         </div>
         <div
           data-aos="fade-up"
           data-aos-offset="400"
           className="col-span-12 md:col-span-6 py-5 pl-5 flex justify-end"
+        >
+          <Image
+            src="/images/task_management.png"
+            alt="task Management"
+            width={429}
+            height={244}
+            quality={100}
+          />
+        </div>
+        <div
+          data-aos="fade-up"
+          className="col-span-12 md:col-span-6 order-last md:order-none mb-10 sm:mb-0"
         >
           <Image
             src="/images/teacher.png"
@@ -99,9 +118,21 @@ const Work: React.FC = (): JSX.Element => {
             quality={100}
           />
         </div>
+        <div
+          data-aos="fade-up"
+          data-aos-offset="400"
+          className="col-span-12 md:col-span-6 py-5 pl-5 flex justify-end"
+        >
+          <DetailProject
+            nameApp="Gredu Teacher"
+            // eslint-disable-next-line max-len
+            description="Web application that works like a teacher's assistant, can automatically arrange schedules and summarize learning outcomes."
+            tags={["React", "Styled component", "React query", "Antd"]}
+          />
+        </div>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default Work;
+export default Work

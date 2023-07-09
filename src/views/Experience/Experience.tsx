@@ -1,14 +1,14 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState } from "react"
 
-import { Container, Tabs, OccupationTitle, List } from "@components/index";
-import { MENU, EXPERIENCE, COMPANY } from "@constants/index";
+import { Container, Tabs, OccupationTitle, List } from "@components/index"
+import { MENU, EXPERIENCE, COMPANY } from "@constants/index"
 
 const Experience: React.FC = (): JSX.Element => {
-  const [curretTab, setCurrentTab] = useState<string>(COMPANY.GREDU);
+  const [curretTab, setCurrentTab] = useState<string>(COMPANY.GREDU)
 
   const handleTab = useCallback((menu: string) => {
-    setCurrentTab(menu);
-  }, []);
+    setCurrentTab(menu)
+  }, [])
 
   return (
     <Container id={MENU.EXPERIENCE} className="pt-24 md:mb-24">
@@ -34,7 +34,7 @@ const Experience: React.FC = (): JSX.Element => {
                     title="JR Front-end Engineer"
                     company="@gredu.asia"
                     start="July 2021"
-                    end="Present"
+                    end="Sep 2022"
                   />
                   <div className="mt-4">
                     <List>
@@ -54,12 +54,36 @@ const Experience: React.FC = (): JSX.Element => {
                   </div>
                 </div>
               )}
+
+              {curretTab === COMPANY.VIRTUAL_SPIRIT && (
+                <div>
+                  <OccupationTitle
+                    title="Frontend Engineer"
+                    company="@virtual.spirit"
+                    start="Okt 2022"
+                    end="Present"
+                  />
+                  <div className="mt-4">
+                    <List>
+                      Develop chat app appliaction and task management using
+                      Next js, tailwind and zustand
+                    </List>
+                    <List>
+                      Developing Design system using React, Styled Component and
+                      storybook for the documentation
+                    </List>
+                    <List>
+                      Maintenance and fixing bug feedback from QA and User
+                    </List>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience
