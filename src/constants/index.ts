@@ -19,6 +19,10 @@ const LANGUAGES = {
   REACT_HOOK_FORM: "React hook form",
   LARAVEL: "Laravel",
   GIT: "Git",
+  DOCKER: "Docker",
+  KUBERNETES: "Kubernetes",
+  TERRAFORM: "Terraaform",
+  ANSIBLE: "Ansible",
 }
 
 export const SKILLS = [
@@ -31,6 +35,10 @@ export const SKILLS = [
   LANGUAGES.REACT_HOOK_FORM,
   LANGUAGES.LARAVEL,
   LANGUAGES.GIT,
+  LANGUAGES.DOCKER,
+  LANGUAGES.KUBERNETES,
+  LANGUAGES.TERRAFORM,
+  LANGUAGES.ANSIBLE,
 ]
 
 export const COMPANY = {
